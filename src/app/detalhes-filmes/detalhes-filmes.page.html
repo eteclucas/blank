@@ -1,6 +1,9 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>detalhesFilmes</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Detalhes do Filme</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -8,21 +11,21 @@
   <ion-grid>
     <ion-row>
       <ion-col size-xs="12" size-md="6">
-        <ion-img  src="https://br.web.img3.acsta.net/c_310_420/pictures/20/03/09/15/51/4538015.jpg"></ion-img>
+        <ion-img  src="{{informacoes.photo_link}}"></ion-img>
       </ion-col>
       <ion-col size-xs="12"  size-md="6">                 
           <ion-list>
             <ion-item>
-              <ion-label><b>Viúva Negra</b></ion-label>
+              <ion-label><b>{{ informacoes.title }}</b></ion-label>
             </ion-item>
             <ion-item>
               <ion-label><b>Categoria: </b> Filme</ion-label>
             </ion-item>
             <ion-item>
-              <ion-label><b>Genero: </b>Ação</ion-label>
+              <ion-label><b>Genero: </b>{{informacoes.genre}}</ion-label>
             </ion-item>
             <ion-item>
-              <ion-label><b>Duração: </b> 120 minutos</ion-label>
+              <ion-label><b>Duração: </b> {{informacoes.duration}} minuto(s)</ion-label>
             </ion-item>
           </ion-list>
       </ion-col>
@@ -34,7 +37,7 @@
         </ion-list-header>
         <ion-list>
           <ion-item>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis convallis dui ipsum, eget gravida tortor fermentum vel. Praesent in purus enim. Fusce feugiat lorem felis. Nunc luctus elementum velit non consequat. Nunc placerat id orci eu placerat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla eu mi dolor. Maecenas quis urna eros. Fusce nunc lectus, dapibus ut porta a, tincidunt id eros. Praesent blandit arcu pulvinar iaculis consequat. Nulla id orci non orci sollicitudin laoreet quis eget tellus. Cras malesuada, augue ac sodales vehicula, enim turpis eleifend sapien, quis tincidunt dui nisl ut est. Etiam pellentesque ullamcorper quam. In quis neque et ex imperdiet laoreet et et libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+           {{informacoes.description}}
           </ion-item>
         </ion-list>
       </ion-col>

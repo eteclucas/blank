@@ -37,9 +37,9 @@ export class HomePage {
       console.log('destaque',this.destaque)
       console.log('filmes',this.filmes)
     }
-    
+
+   // http://localhost:8100/detalhes-filmes;id=13
   detalhesFilme(paramID){
-    console.log("passou "+paramID); 
     this.rota.navigate(['/detalhes-filmes', {id:paramID}])
   }
 
